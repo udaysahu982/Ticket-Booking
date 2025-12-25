@@ -1,0 +1,12 @@
+.navLoc{
+    width: 60%;
+
+}
+@media(max-width:500px){
+    .navLoc{
+        width: 400px;
+    }
+    .nav-loc{
+        margin-bottom: 10px;
+    }
+}

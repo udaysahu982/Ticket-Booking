@@ -2,7 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Navbar from './components/Navbar'
+import Navbar from './Navbar/Navbar'
+import MySwiper from './body/swiper/MySwiper'
 
 function App() {
   
@@ -10,7 +11,11 @@ function App() {
   return (
     <>
     <Navbar></Navbar>
-     <div className=''>hello</div>
+    
+    <MySwiper/>
+
+    
+     
     </>
   )
 }
