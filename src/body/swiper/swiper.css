@@ -3,9 +3,16 @@
 }
 
 
+.swiper-box-container{
+  width: 100vw;
+    height: 80vh;
+}
+
+
 .swiper {
   width: 100%;
-  height: 90vh;
+  height: 100%;
+
 }
 
 .swiper-slide {
@@ -24,4 +31,31 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.swipbg{
+  width: 100%;
+  height: 90%;
+  border-radius: 5%;
+  /* border: 2px solid black; */
+  background: url(dhurandar.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.swipbg-dhur{
+
+  background: url(dhurandar.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+   background-position:center;
+}
+
+
+
+@media(max-width:500px){
+  .swiper-box-container{
+  width: 1190px;
+  height:170vh;
+}
 }

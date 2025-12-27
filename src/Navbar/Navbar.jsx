@@ -12,15 +12,15 @@ const Navbar = () => {
   return (
    <>
 
-   <div className='h-35 sm:h-19 border flex justify-between '>
-    <div className=' w-96 h-35 sm:h-19 flex'><Logo/><NavLoc/></div>
-    <div className='w-290  h-35 sm:h-19 flex items-center justify-between '> <ListOpt/>
-    <div className='w-200 h-35 sm:h-19  flex justify-end items-center'> 
-    <div className='w-150  h-35 sm:h-19 flex gap-8 justify-end items-center' > <Search/>  <UserBtn/>  </div> 
+   <div className='h-20  md:h-19  flex justify-between '>
+    <div className=' md:w-96 h-20 md:h-19 flex'><Logo/><NavLoc/></div>
+    <div className='  md:w-290 h-19 flex items-center justify-between '> <ListOpt/>
+    
+    <div className=' md:w-150 w-20 h-20 md:h-19 flex md:gap-8 justify-end items-center' > <div className='hidden sm:flex md:w-100'><Search /></div>  <UserBtn/>  </div> 
 
     </div>
     </div>
-    </div>
+    <div className='md:hidden border w-full h-16 flex items-center justify-center'><div style={{width:"95%"}}><Search /></div></div>
    </>
   )
 }

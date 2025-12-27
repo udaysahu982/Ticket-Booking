@@ -5,13 +5,13 @@ import {  MapPin } from "lucide-react";
 
 const NavLoc = () => {
   return (
-    <div className=' flex items-center justify-around navLoc '  >        
-          <MapPin color='blue 'size={32} />
-          <div >
-        <h3 className=" text-4xl sm:text-lg font-semibold sm:text-gray-800 nav-loc">
+    <div className=' w-52 h-20 sm:h-19 flex items-center justify-around  '  >        
+          <MapPin color='blue ' size={20} />
+          <div className=' '>
+        <h3 className=" text-xl sm:text-lg font-semibold sm:text-gray-800">
           Bhopal
         </h3>
-        <p className="text-2xl sm:text-sm text-gray-500 font-semibold">
+        <p className=" text-sm sm:text-sm text-gray-500 font-mono font-bold">
           Bhopal, Madhya Pradesh
         </p>
          </div>
