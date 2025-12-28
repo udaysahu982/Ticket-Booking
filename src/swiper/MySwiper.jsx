@@ -19,7 +19,7 @@ import SwiperCont from './SwiperCont';
 const MySwiper = () => {
   return (
    
-    <div className='w-92.7 h-50 md:h-150  md:swiper-box-container'>
+    <div className='w-92.7 h-70 md:h-150  md:swiper-box-container'>
 
       <Swiper
         spaceBetween={0}
@@ -37,8 +37,8 @@ const MySwiper = () => {
         
       >
         
-        <SwiperSlide> <SwiperCont/> </SwiperSlide>
-        <SwiperSlide><SwiperCont/></SwiperSlide>
+        <SwiperSlide> <SwiperCont /> </SwiperSlide>
+        <SwiperSlide><SwiperCont /></SwiperSlide>
         <SwiperSlide><SwiperCont/></SwiperSlide>
         <SwiperSlide><SwiperCont/></SwiperSlide>
         <SwiperSlide><SwiperCont/></SwiperSlide>

@@ -6,7 +6,7 @@ import ListOpt from './ListOpt';
 import NavLoc from './NavLoc';
 import Logo from './Logo';
 import UserBtn from './UserBtn';
-
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
     <div className=' md:w-96 h-20 md:h-19 flex'><Logo/><NavLoc/></div>
     <div className='  md:w-290 h-19 flex items-center justify-between '> <ListOpt/>
     
-    <div className=' md:w-150 w-20 h-20 md:h-19 flex md:gap-8 justify-end items-center' > <div className='hidden sm:flex md:w-100'><Search /></div>  <UserBtn/>  </div> 
+    <div className=' md:w-150 w-20 h-20 md:h-19 flex md:gap-8 justify-end items-center' > <div className='hidden sm:flex md:w-100'><Search /></div> <UserBtn/>   </div> 
 
     </div>
     </div>

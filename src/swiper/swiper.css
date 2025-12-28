@@ -1,3 +1,4 @@
+
 #app {
   height: 100%;
 }
@@ -37,11 +38,12 @@
   height: 90%;
   border-radius: 5%;
   /* border: 2px solid black; */
-  background: url(dhurandar.jpg);
+  background: url(dhurandar1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
 
 .swipbg-dhur{
 
