@@ -34,10 +34,10 @@ const MovieCard=(data)=> {
 
   return (
     <div
-      className="movie-card"
-      ref={cardRef}
-      onMouseEnter={handleEnter}
-      onMouseLeave={handleLeave}
+      className="movie-card min-w-55 md:min-w-0 snap-start"
+  ref={cardRef}
+  onMouseEnter={handleEnter}
+  onMouseLeave={handleLeave}
     >
       <img
         src={data.movie.image}

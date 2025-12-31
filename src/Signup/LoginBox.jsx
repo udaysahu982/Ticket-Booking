@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const Signup = () => {
+const LoginBox = () => {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     password: ""
   });
@@ -17,32 +18,25 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData); // later connect API
+    console.log(formData); // API later
   };
 
   return (
-    <div className="w-full max-w-sm bg-white rounded-xl shadow-lg ">
-        <div className=" w-full h-8  flex justify-end ">
-           <Link to="/"> <div className=" w-8 h-full rounded-full bg-black flex justify-center items-center text-white font-extrabold"> ✕</div></Link> 
-        </div>
-        <div className="p-6">
-      <h2 className=" text-2xl font-semibold text-center mb-6">
-        Create Account
+    <div className="relative w-full max-w-sm bg-white rounded-xl shadow-lg p-6">
+
+      {/* ❌ Close Button (RIGHT SIDE) */}
+      <Link to="/" className="absolute -right-0.5 top-1 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition font-extrabold"
+      >
+        ✕
+      </Link>
+
+      <h2 className="text-2xl font-semibold text-center mb-6">
+        Login
       </h2>
-      
 
       <form onSubmit={handleSubmit} className="space-y-4">
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-
+        {/* Email */}
         <input
           type="email"
           name="email"
@@ -53,6 +47,7 @@ const Signup = () => {
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
         />
 
+        {/* Password */}
         <input
           type="password"
           name="password"
@@ -63,26 +58,40 @@ const Signup = () => {
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
         />
 
+        {/* Forgot password */}
+        <div className="text-right">
+          <button
+            type="button"
+            onClick={() => navigate("/forgot-password")}
+            className="text-sm text-red-500 hover:underline"
+          >
+            Forgot password?
+          </button>
+        </div>
+
+        {/* Login button */}
         <button
           type="submit"
           className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg transition"
         >
-          Sign Up
+          Login
         </button>
 
       </form>
 
+      {/* Register link */}
       <p className="text-sm text-center mt-4">
-        Already have an account?{" "}
-        <span className="text-red-500 cursor-pointer">
-            <Link to="/login">
-          Login
-            </Link>
+        Don’t have an account?{" "}
+        <span
+          onClick={() => navigate("/signup")}
+          className="text-red-500 cursor-pointer hover:underline"
+        >
+          Register here
         </span>
       </p>
-      </div>
+
     </div>
   );
 };
 
-export default Signup;
+export default LoginBox;

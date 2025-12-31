@@ -12,6 +12,8 @@ import Foryou from './ForYou/Foryou'
 import Signup from './Signup/Signup'
 import MainLayout from './MainLayout'
 import AuthLayout from './AuthLayout'
+import Login from './Signup/Login'
+
 
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
 
       <Route element={<AuthLayout/>}>
       <Route path='/signup' element={<Signup/>}/>
-      <Route path='/login' />
+      <Route path='/login' element={<Login/>}/>
       </Route>
     </Routes>
     

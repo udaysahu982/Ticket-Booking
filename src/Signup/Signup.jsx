@@ -1,5 +1,5 @@
 import React from 'react'
-import Antigravity from './Antigravity'
+
 import SignupBox from './SignupBox'
 import Galaxy from './Galaxy';
 
