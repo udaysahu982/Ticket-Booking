@@ -47,6 +47,24 @@ const WeekRelease = () => {
       rating: "UA",
       duration: "2h 10m",
       genre: "Drama"
+    },
+    {
+      id: 5,
+      image: "dhurandar1.jpg",
+      title: "Dhurandar",
+      language: "Hindi",
+      rating: "UA",
+      duration: "2h 10m",
+      genre: "Drama"
+    },
+    {
+      id: 6,
+      image: "avatar.jpg",
+      title: "Avatar",
+      language: "Hindi",
+      rating: "UA",
+      duration: "2h 10m",
+      genre: "Drama"
     }
     
   ];
