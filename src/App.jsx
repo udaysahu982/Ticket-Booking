@@ -13,7 +13,7 @@ import Signup from './Signup/Signup'
 import MainLayout from './MainLayout'
 import AuthLayout from './AuthLayout'
 import Login from './Signup/Login'
-
+import LocationSearch from './PopWindows/LocationSearch'
 
 
 function App() {
@@ -35,6 +35,7 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       </Route>
     </Routes>
+    
     
     </>
   )

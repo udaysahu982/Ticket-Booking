@@ -7,10 +7,11 @@ import NavLoc from './NavLoc';
 import Logo from './Logo';
 import UserBtn from './UserBtn';
 import { Link } from 'react-router-dom'
+import LocationSearch from '../PopWindows/LocationSearch';
 
 const Navbar = () => {
   return (
-   <>
+   < div className=''>
 
    <div className='h-20  md:h-19  flex justify-between '>
     <div className=' md:w-96 h-20 md:h-19 flex'><Logo/><NavLoc/></div>
@@ -21,7 +22,8 @@ const Navbar = () => {
     </div>
     </div>
     <div className='md:hidden border w-full h-16 flex items-center justify-center'><div style={{width:"95%"}}><Search /></div></div>
-   </>
+    
+   </ div>
   )
 }
 

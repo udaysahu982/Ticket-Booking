@@ -1,10 +1,15 @@
 import React from 'react'
+import MySwiper from '../swiper/MySwiper'
+import ExploreEvents from './ExploreEvents'
 
 const Events = () => {
   return (
-    <div>
-      Hello to Events
-    </div>
+   
+  <div>
+    <MySwiper/>
+    <ExploreEvents/>
+  </div>
+   
   )
 }
 

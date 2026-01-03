@@ -1,9 +1,12 @@
 import React from 'react'
+import DiningBody from './DiningBody'
+// import DiningHome from './DiningHome'
 
 const Dining = () => {
   return (
     <div>
-      hello to dining
+      <DiningBody/>
+      {/* <DiningHome/> */}
     </div>
   )
 }
