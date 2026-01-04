@@ -1,8 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
 
 const LoginBox = () => {
-  const navigate = useNavigate();
+  let navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -16,15 +17,30 @@ const LoginBox = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(formData); // API later
+    let api="http://localhost:3000/movie";
+    let res= await axios.get(`${api}?email=${formData.email}`)
+    let user = res.data[0];
+
+    if(!res.data.length){
+      return alert("Invaild email and password");
+    }
+   else if(user.password!==formData.password){
+      return alert("Invaild email and password");
+    }
+    else{
+      alert("Login Success")
+      navigate("/")
+    }
+
+
+    
   };
 
   return (
     <div className="relative w-full max-w-sm bg-white rounded-xl shadow-lg p-6">
 
-      {/* ❌ Close Button (RIGHT SIDE) */}
       <Link to="/" className="absolute -right-0.5 top-1 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition font-extrabold"
       >
         ✕
@@ -73,6 +89,7 @@ const LoginBox = () => {
         <button
           type="submit"
           className="w-full bg-red-500 hover:bg-red-600 text-white py-3 rounded-lg transition"
+      
         >
           Login
         </button>

@@ -1,23 +1,70 @@
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import axios from 'axios'
+import { LogIn } from "lucide-react";
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
+  
+const navigate=useNavigate();
+
+  let [formData, setFormData] = useState({
     name: "",
     email: "",
+    number:"",
     password: ""
   });
 
-  const handleChange = (e) => {
+
+
+  let handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = (e) => {
+  let handleSubmit = async(e) => {
+    const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const strongPass=/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+
     e.preventDefault();
-    console.log(formData); // later connect API
+    let api="http://localhost:3000/movie";
+
+
+    if( formData.name.trim()==""){
+      return alert("Enter a valid Name")
+    }
+    if(formData.number.length != 10){
+      return alert("Enter a valid Number")
+    }
+    if(!emailPattern.test(formData.email)){
+      return alert("Enter a valid Email")
+    }
+    if(!strongPass.test(formData.password)){
+      return alert("Enter a Strong password")
+    }
+
+     let res= await axios.get(`${api}?email=${formData.email}`)
+     let res1= await axios.get(`${api}?number=${formData.number}`)
+     if(res.data.length>0){
+       return alert("Email Already Exists")
+     }
+     else if(res1.data.length>0){
+      return alert("Number Already Exists")
+     }
+     else{
+      axios.post(api,formData).then(()=>{
+       alert("Signup Successfull");
+      navigate("/login")
+
+    })
+     }
+   
+
+    
+
+   
+    
   };
 
   return (
@@ -48,6 +95,15 @@ const Signup = () => {
           name="email"
           placeholder="Email Address"
           value={formData.email}
+          onChange={handleChange}
+          required
+          className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+        />
+        <input
+          type="number"
+          name="number"
+          placeholder="Phone Number"
+          value={formData.number}
           onChange={handleChange}
           required
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"

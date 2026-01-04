@@ -1,6 +1,25 @@
 {
-    "movie":[ 
-
-       {},{}
-    ]
+  "movie": [
+    {
+      "id": "5345",
+      "name": "Uday Sahu",
+      "email": "usnsv71@gmail.com",
+      "number": "1234567890",
+      "password": "1234"
+    },
+    {
+      "id": "132d",
+      "name": "uday",
+      "email": "uday@gmail.com",
+      "number": "8787878787",
+      "password": "Ud!y1234"
+    },
+    {
+      "id": "ba5e",
+      "name": "Uday Sahu",
+      "email": "udaysahu982@gmail.com",
+      "number": "0911134259",
+      "password": "Ud@y1234"
+    }
+  ]
 }
