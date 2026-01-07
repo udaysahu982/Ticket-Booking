@@ -13,6 +13,7 @@ import Signup from './Signup/Signup'
 import MainLayout from './MainLayout'
 import AuthLayout from './AuthLayout'
 import Login from './Signup/Login'
+import BookingPage from './BookingPage/BookingPage'
 import LocationSearch from './PopWindows/LocationSearch'
 
 
@@ -28,6 +29,7 @@ function App() {
       <Route path="/events" element={<Events/>}/>
       <Route path="/dining" element={<Dining/>}/>
       <Route path="/foryou" element={<Foryou/>}/>
+      <Route path='/Booking' element={<BookingPage/>}/>
       </Route>
 
       <Route element={<AuthLayout/>}>
