@@ -1,12 +1,15 @@
 import React from 'react'
 import EventCard from './EventCard'
-import music from '../assets/music/music.avif'
-import nightlife from '../assets/music/nightlife.avif'
-import comedy from '../assets/music/comedy.avif'
-import sport from '../assets/music/sport.avif'
+
+
+
 
 const ExploreEvents = () => {
 
+  let music ="/music/Music.avif"
+  let nightlife="/music/nightlife.avif"
+  let comedy="/music/comedy.avif"
+  let sport="/music/sport.avif"
 
   return (
     <div className='w-full h-100'>
