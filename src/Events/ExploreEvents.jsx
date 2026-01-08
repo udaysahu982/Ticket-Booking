@@ -14,7 +14,7 @@ const ExploreEvents = () => {
   return (
     <div className='w-full h-100'>
       <div className='h-16 text-3xl font-semibold border flex items-center pl-12'>Explore Events</div>
-      <div className='p-12 border flex gap-5'>
+      <div className='p-12 border flex gap-4 overflow-x-auto snap-x snap-mandatory '>
        <EventCard cardimg={music}/>
        <EventCard cardimg={nightlife}/>
        <EventCard cardimg={comedy}/>

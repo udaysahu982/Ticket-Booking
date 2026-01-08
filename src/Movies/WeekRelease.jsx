@@ -101,6 +101,7 @@ const WeekRelease = () => {
     md:grid md:grid-cols-2 md:gap-4
     lg:grid-cols-4
     md:overflow-visible
+
         "
       >
         {movies.map((movie) => (
