@@ -70,7 +70,7 @@ const navigate=useNavigate();
   return (
     <div className="w-full max-w-sm bg-white rounded-xl shadow-lg ">
         <div className=" w-full h-8  flex justify-end ">
-           <Link to="/"> <div className=" w-8 h-full rounded-full bg-black flex justify-center items-center text-white font-extrabold"> ✕</div></Link> 
+           <Link to="/user"> <div className=" w-8 h-full rounded-full bg-black flex justify-center items-center text-white font-extrabold"> ✕</div></Link> 
         </div>
         <div className="p-6">
       <h2 className=" text-2xl font-semibold text-center mb-6">

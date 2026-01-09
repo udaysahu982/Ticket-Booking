@@ -15,6 +15,7 @@ import AuthLayout from './AuthLayout'
 import Login from './Signup/Login'
 import BookingPage from './BookingPage/BookingPage'
 import LocationSearch from './PopWindows/LocationSearch'
+import UserDetails from './Signup/SideNav/UserDetails'
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
       <Route element={<AuthLayout/>}>
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
+      <Route path='/user' element={<UserDetails/>}/>
       </Route>
     </Routes>
     

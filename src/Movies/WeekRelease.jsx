@@ -69,13 +69,13 @@ const WeekRelease = () => {
   
 
   return (
-    <div className=" bg-gray-100 md:w-full md:h-160 md:flex md:justify-center md:items-center">
+    <div className=" bg-gray-100 w-95 md:w-full md:h-160 md:flex md:justify-center md:items-center">
     <div className="  bg-white rounded-3xl md:w-370 md:h-140 md:flex md:flex-col md:justify-center md:items-center">
 
-      <div className="border-b-2 md:w-full md:h-15 md:text-4xl md:flex md:items-center pl-18 font-semibold">New Release</div>
-      <div className="md:h-135  md:w-full md:flex gap-10 md:justify-center md:items-center overflow-x-auto pl-80" style={{scrollbarWidth:"none"}}>
+      <div className="border-b-2 h-20 md:w-full md:h-15 text-3xl md:text-4xl flex items-center pl-10 md:pl-18 font-semibold">New Release</div>
+      <div className="md:h-135 md:w-full flex gap-10 overflow-x-auto  " style={{scrollbarWidth:"none"}}>
 
-       {movies.map((e)=>(<MovieCard movie={e} />))}
+       {movies.map((e,i)=>(<MovieCard key={i} movie={e} />))}
 
       </div>
     </div>

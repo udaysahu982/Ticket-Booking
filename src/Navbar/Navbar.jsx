@@ -11,7 +11,7 @@ import LocationSearch from '../PopWindows/LocationSearch';
 
 const Navbar = () => {
   return (
-   < div className=''>
+   < div className='md:w-380'>
 
    <div className='h-20  md:h-19  flex justify-between '>
     <div className=' md:w-96 h-20 md:h-19 flex'><Logo/><NavLoc /></div>

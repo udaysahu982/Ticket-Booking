@@ -1,10 +1,26 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Heart, Share2, Play } from "lucide-react";
 import gsap from "gsap";
 import RateNow from "./RateNow";
+import axios from "axios";
+import MovieLoader from "./MovieLoader";
 
-const BookingPageHead = ({props}) => {
+const BookingPageHead = ({id}) => {
   const containerRef = useRef(null);
+  let [data,setData]=useState(null);
+
+
+  useEffect(()=>{
+ 
+   axios.get(`http://localhost:3000/movielist/${id}`)
+   .then((res)=>{
+     
+     console.log(res.data);
+     setData(res.data);
+   })
+   .catch((err)=>console.log(err));
+  
+  },[id])
 
   useEffect(() => {
     gsap.from(containerRef.current, {
@@ -15,10 +31,19 @@ const BookingPageHead = ({props}) => {
     });
   }, []);
 
+  if (!data) {
+    return (
+      <>
+      <MovieLoader/>
+      </>
+      
+    );
+  }
+
   return (
     <section
       className="relative w-full min-h-[75vh] md:min-h-[85vh] bg-cover bg-center"
-      style={{ backgroundImage: `url(${props.photo})` }}
+      style={{ backgroundImage: `url(${data.photo})` }}
     >
       {/* Overlay */}
       <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-black/40" />
@@ -31,7 +56,7 @@ const BookingPageHead = ({props}) => {
         {/* Poster */}
         <div className="w-44 md:w-64 shrink-0">
           <img
-            src={props.photo1}
+            src={data.photo1}
             alt="Movie Poster"
             className="rounded-2xl shadow-2xl"
           />
@@ -43,7 +68,7 @@ const BookingPageHead = ({props}) => {
           {/* Title & Actions */}
           <div className="flex flex-wrap items-center gap-4">
             <h1 className="text-3xl md:text-5xl font-bold tracking-wide">
-              {props.movieName}
+              {data.movieName}
             </h1>
 
             <div className="flex gap-3">
@@ -66,7 +91,7 @@ const BookingPageHead = ({props}) => {
 
           {/* Genres */}
           <div className="flex flex-wrap gap-3">
-            {[props.movieTitle1, props.movieTitle2, props.movieTitle3].map((genre,i) => (
+            {[data.movieTitle1, data.movieTitle2, data.movieTitle3].map((genre,i) => (
               <span
                 key={i}
                 className="px-4 py-1 rounded-full text-sm bg-white/10 backdrop-blur"
@@ -83,7 +108,7 @@ const BookingPageHead = ({props}) => {
 
           {/* Description */}
           <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-2xl">
-           {props.movieAbout}
+           {data.movieAbout}
           </p>
 
           {/* Trailer Button */}

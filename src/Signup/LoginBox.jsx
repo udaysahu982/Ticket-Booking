@@ -41,7 +41,7 @@ const LoginBox = () => {
   return (
     <div className="relative w-full max-w-sm bg-white rounded-xl shadow-lg p-6">
 
-      <Link to="/" className="absolute -right-0.5 top-1 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition font-extrabold"
+      <Link to="/user" className="absolute -right-0.5 top-1 w-8 h-8 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 transition font-extrabold"
       >
         ✕
       </Link>

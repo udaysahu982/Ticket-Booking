@@ -1,40 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Heart, Popcorn, Ticket } from "lucide-react";
 import DateSelect from "./DateSelect";
+import axios from "axios";
 
 const CinemaSelect = () => {
   const [selectedShow, setSelectedShow] = useState(null);
+  let [theatres,setTheaters]=useState([]);
 
-  const theatres = [
-    {
-      id: 1,
-      name: "DB City Mall",
-      location: "MP Nagar, Bhopal",
-      shows: ["10:30 AM", "1:45 PM", "4:30 PM", "7:15 PM", "10:00 PM"],
-      icon: "/icon/cinepolisicon.png",
-    },
-    {
-      id: 2,
-      name: "Aura Mall",
-      location: "Gulmohar, Bhopal",
-      shows: ["11:00 AM", "2:15 PM", "5:00 PM", "8:30 PM"],
-      icon: "/icon/cinepolisicon.png",
-    },
-    {
-      id: 3,
-      name: "Mukta A2 Cinemas",
-      location: "Kolar Road, Bhopal",
-      shows: ["9:45 AM", "12:30 PM", "3:15 PM", "6:00 PM", "9:30 PM"],
-      icon: "/icon/a2.png",
-    },
-    {
-      id: 4,
-      name: "PVR Cinemas",
-      location: "New Market, Bhopal",
-      shows: ["10:00 AM", "1:00 PM", "4:00 PM", "7:00 PM", "10:15 PM"],
-      icon: "/icon/pvricon.png",
-    },
-  ];
+ 
+
+  useEffect(()=>{
+    axios.get(`http://localhost:3000/theaters`)
+    .then((res)=>{
+      setTheaters(res.data)
+    }).catch((err)=>console.log(err)),
+    []})
+
 
   return (
     <section className="w-full px-4 md:px-12 py-6 bg-gray-100">
