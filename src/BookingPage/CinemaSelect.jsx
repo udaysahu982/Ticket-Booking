@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Heart, Popcorn, Ticket } from "lucide-react";
+import DateSelect from "./DateSelect";
 
 const CinemaSelect = () => {
   const [selectedShow, setSelectedShow] = useState(null);
@@ -37,6 +38,7 @@ const CinemaSelect = () => {
 
   return (
     <section className="w-full px-4 md:px-12 py-6 bg-gray-100">
+      <DateSelect/>
       <h2 className="text-xl md:text-3xl font-semibold mb-6">
         Select Theatre & Show Time
       </h2>

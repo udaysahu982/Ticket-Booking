@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import "./MoviesCard.css";
+import { Link } from "react-router-dom";
 
 const MovieCard=(data)=> {
   const cardRef = useRef(null);
@@ -33,6 +34,8 @@ const MovieCard=(data)=> {
   };
 
   return (
+
+    <Link to={`/Booking/${data.movie.id}`}>
     <div
       className="movie-card min-w-55 md:min-w-0 snap-start"
   ref={cardRef}
@@ -56,6 +59,7 @@ const MovieCard=(data)=> {
         <p className="movie-extra">{data.movie.duration} • {data.movie.genre}</p>
       </div>
     </div>
+    </Link>
   );
 }
 

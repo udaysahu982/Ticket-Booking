@@ -16,27 +16,9 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import './swiper.css';
 import SwiperCont from './SwiperCont';
 
-const MySwiper = () => {
+const MySwiper = (props) => {
 
-  let imgObj={
-    photo:"dhurandar.jpg",
-    photo1:"dhurandar1.jpg",
-    movieName:"Dhurandar",
-    movieTitle:"A | Action, Thriller"
-  }
   
-   let imgObj1={
-    photo:"avatar.jpg",
-    photo1:"avatar1.jpg",
-    movieName:"Avatar",
-    movieTitle:"UA 16+ | Action, Adventure +2 more"
-  }
-   let imgObj2={
-    photo:"ikkis.jpg",
-    photo1:"ikkis1.jpg",
-    movieName:"Ikkis",
-    movieTitle:"A | Drama, Action +2 more"
-  }
 
   return (
    
@@ -57,11 +39,7 @@ const MySwiper = () => {
         className="mySwiper "
         
       >
-        
-        <SwiperSlide> <SwiperCont props={imgObj} /> </SwiperSlide>
-        <SwiperSlide><SwiperCont props={imgObj1}/></SwiperSlide>
-        <SwiperSlide><SwiperCont props={imgObj2}/></SwiperSlide>
-        
+        {props.Data.map((e)=>(<SwiperSlide> <SwiperCont props={e} /> </SwiperSlide>))}
         
       </Swiper>
      </div>

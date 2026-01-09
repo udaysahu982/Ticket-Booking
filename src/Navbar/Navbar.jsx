@@ -21,7 +21,7 @@ const Navbar = () => {
 
     </div>
     </div>
-    <div className='w-full h-10 border items-center md:hidden'><ListOpt/></div>
+    <div className='w-full h-22 border items-center md:hidden'><ListOpt/></div>
     <div className='md:hidden border w-full h-16 flex items-center justify-center'><div style={{width:"95%"}}><Search /></div></div>
     
    </ div>

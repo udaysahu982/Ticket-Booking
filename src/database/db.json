@@ -22,4 +22,71 @@
       "password": "Ud@y1234"
     }
   ]
+  ,
+  "movielist":[
+     {
+    "id":0,
+    "photo":"/movies/dhurandar.jpg",
+    "photo1":"/movies//dhurandar1.jpg",
+    "movieName":"Dhurandar",
+    "movieTitle1":"Action",
+    "movieTitle2":"Thriller",
+    "movieTitle3":"Drama", 
+    "movieTitle":"A | Action, Thriller",
+    "movieAbout":"Dhurandar is a high-octane action thriller packed with intense drama, powerful performances, and edge-of-the-seat moments."
+  },
+  {
+    "id":1,
+    "photo":"/movies/avatar.jpg",
+    "photo1":"/movies//avatar1.jpg",
+    "movieName":"Avatar",
+    "movieTitle1":"Action",
+    "movieTitle2":"Adventure",
+    "movieTitle3":"Sci fi",
+    "movieTitle":"UA 16+ | Action, Adventure +2 more",
+    "movieAbout":"Avatar is a visually breathtaking epic that blends groundbreaking spectacle with a high-stakes emotional journey, plunging audiences into a battle for survival fueled by sacrifice and primal power."
+
+  },
+  {
+    "id":2,
+    "photo":"/movies/ikkis.jpg",
+    "photo1":"/movies//ikkis1.jpg",
+    "movieName":"Ikkis",
+    "movieTitle1":"Action",
+    "movieTitle2":"Adventure",
+    "movieTitle3":"Sci fi",
+    "movieTitle":"A | Drama, Action +2 more",
+    "movieAbout":"Ikkis is a gripping, soul-stirring war drama that honors extraordinary bravery with raw intensity, capturing a young soldier’s unbreakable spirit amidst the thunderous chaos of the 1971 battlefield."
+  },
+  {
+    "id": 3,
+    "photo":"/movies/tumera1.avif",
+    "photo1": "/movies/tumera.jpg",
+    "movieName":"Tu Meri Main Tera Main Tera Tu Mer",
+    "movieTitle1":"Romance",
+    "movieTitle2":"Adventure",
+    "movieTitle3":"Comedy",
+    "movieAbout":"Two people fall in love while finding themselves, but family pressures challenge their relationship."      
+  },
+  {
+    "id":4,
+    "photo":"/movies/Rajasaab1.avif",
+    "photo1":"/movies/Rajasaab.avif",
+    "movieName":"Raja Saab",
+    "movieTitle1":"Standup Comedy",
+    "movieTitle2":"Comedy",
+    "movieTitle3":"Horror",
+    "movieAbout":"A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab."
+  },
+  {
+    "id":5,
+    "photo":"/movies/jananyagan.jpg",
+    "photo1":"/movies/jananayagan.avif",
+    "movieName":"Jana Nayagan",
+    "movieTitle1":"Adventure",
+    "movieTitle2":"Action",
+    "movieTitle3":"Drama",
+    "movieAbout":"A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab."
+  }
+  ]
 }

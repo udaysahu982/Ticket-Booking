@@ -1,4 +1,5 @@
 import React from "react";
+import { Instagram, Facebook,Youtube,Linkedin, Twitter } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -43,11 +44,11 @@ const Footer = () => {
         <div>
           <h4 style={styles.heading}>Follow Us</h4>
           <div style={styles.socials}>
-            <span>🌐</span>
-            <span>📘</span>
-            <span>📸</span>
-            <span>🐦</span>
-            <span>▶️</span>
+            <span>  <Instagram /></span>
+            <span> <Facebook /></span>
+            <span><Youtube/></span>
+            <span><Linkedin /></span>
+            <span><Twitter/></span>
           </div>
         </div>
       </div>

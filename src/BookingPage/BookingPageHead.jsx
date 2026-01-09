@@ -3,7 +3,7 @@ import { Heart, Share2, Play } from "lucide-react";
 import gsap from "gsap";
 import RateNow from "./RateNow";
 
-const BookingPageHead = () => {
+const BookingPageHead = ({props}) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -18,10 +18,10 @@ const BookingPageHead = () => {
   return (
     <section
       className="relative w-full min-h-[75vh] md:min-h-[85vh] bg-cover bg-center"
-      style={{ backgroundImage: "url(dhurandar.jpg)" }}
+      style={{ backgroundImage: `url(${props.photo})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+      <div className="absolute inset-0 bg-linear-to-r from-black/90 via-black/70 to-black/40" />
 
       {/* Content */}
       <div
@@ -31,7 +31,7 @@ const BookingPageHead = () => {
         {/* Poster */}
         <div className="w-44 md:w-64 shrink-0">
           <img
-            src="dhurandar1.jpg"
+            src={props.photo1}
             alt="Movie Poster"
             className="rounded-2xl shadow-2xl"
           />
@@ -43,7 +43,7 @@ const BookingPageHead = () => {
           {/* Title & Actions */}
           <div className="flex flex-wrap items-center gap-4">
             <h1 className="text-3xl md:text-5xl font-bold tracking-wide">
-              Dhurandar
+              {props.movieName}
             </h1>
 
             <div className="flex gap-3">
@@ -66,9 +66,9 @@ const BookingPageHead = () => {
 
           {/* Genres */}
           <div className="flex flex-wrap gap-3">
-            {["Action", "Thriller", "Drama"].map((genre) => (
+            {[props.movieTitle1, props.movieTitle2, props.movieTitle3].map((genre,i) => (
               <span
-                key={genre}
+                key={i}
                 className="px-4 py-1 rounded-full text-sm bg-white/10 backdrop-blur"
               >
                 {genre}
@@ -83,8 +83,7 @@ const BookingPageHead = () => {
 
           {/* Description */}
           <p className="text-sm md:text-base text-gray-300 leading-relaxed max-w-2xl">
-            Dhurandar is a high-octane action thriller packed with intense drama,
-            powerful performances, and edge-of-the-seat moments.
+           {props.movieAbout}
           </p>
 
           {/* Trailer Button */}
