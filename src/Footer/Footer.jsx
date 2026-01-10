@@ -44,11 +44,11 @@ const Footer = () => {
         <div>
           <h4 style={styles.heading}>Follow Us</h4>
           <div style={styles.socials}>
-            <span>  <Instagram /></span>
-            <span> <Facebook /></span>
-            <span><Youtube/></span>
-            <span><Linkedin /></span>
-            <span><Twitter/></span>
+            <span>  <Instagram className="hover:text-pink-800" /></span>
+            <span> <Facebook className="hover:text-blue-800"/></span>
+            <span><Youtube className="hover:text-red-800"/></span>
+            <span><Linkedin className="hover:text-blue-800" /></span>
+            <span><Twitter className="hover:text-sky-500"/></span>
           </div>
         </div>
       </div>

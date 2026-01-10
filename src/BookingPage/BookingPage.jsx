@@ -14,7 +14,7 @@ const BookingPage = () => {
     
       {/* <BookingPageHead props={imgObj[id]}/> */}
       <BookingPageHead id={id}/>
-      <BookingPageBody/>
+      <BookingPageBody />
     </>
   )
 }

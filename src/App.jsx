@@ -18,6 +18,7 @@ import LocationSearch from './PopWindows/LocationSearch'
 import UserDetails from './Signup/SideNav/UserDetails'
 
 
+
 function App() {
   
 
@@ -37,6 +38,7 @@ function App() {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/user' element={<UserDetails/>}/>
+    
       </Route>
     </Routes>
     
