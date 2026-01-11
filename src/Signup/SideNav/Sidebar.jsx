@@ -1,8 +1,19 @@
-import React from "react";
+import React, { use, useEffect, useState } from "react";
 import { User, LogIn } from "lucide-react";
 import { Link } from "react-router-dom";
+import UserLoginButton from "./UserLoginButton";
+import UserLogoutButton from "./UserLogoutButton";
 
 const Sidebar = ({ setActive }) => {
+
+  let [userData, setUserData] = useState(null);
+
+ useEffect(() => {
+    // Get logged-in user from localStorage
+    let user = JSON.parse(localStorage.getItem("loginUser"));
+    setUserData(user);
+  }, []);
+
   return (
     <aside className="md:w-1/4 w-full bg-gray-900 text-white flex flex-col justify-between p-6">
 
@@ -12,8 +23,8 @@ const Sidebar = ({ setActive }) => {
           <div className="w-20 h-20 bg-gray-700 rounded-full flex items-center justify-center text-3xl font-semibold">
             <User size={32} />
           </div>
-          <h2 className="mt-3 text-lg font-semibold">User Name</h2>
-          <p className="text-sm text-gray-400">user@email.com</p>
+          <h2 className="mt-3 text-lg font-semibold">{userData?.name || "username"}</h2>
+          <p className="text-sm text-gray-400">{userData?.email || "user@example.com"}</p>
         </div>
 
         {/* ---------- Menu ---------- */}
@@ -26,15 +37,8 @@ const Sidebar = ({ setActive }) => {
       </div>
 
       {/* ---------- Bottom Buttons ---------- */}
-      <div className="pt-6 border-t border-gray-700">
-        
-        <Link to='/login'
-          onClick={() => setActive("login")}
-          className="w-full flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 transition py-2 rounded-lg font-semibold"
-        >
-          <LogIn size={18} />
-          Login / Signup
-        </Link>
+      <div className="mt-6">
+        {userData ? <UserLogoutButton setUserData={setUserData} /> : <UserLoginButton />}
       </div>
 
     </aside>

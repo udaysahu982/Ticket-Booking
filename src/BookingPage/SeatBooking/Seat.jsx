@@ -1,13 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { X } from "lucide-react";
+import SeatBookingScreen from "./SeatBookingScreen";
+import SeatGrid from "./SeatGrid";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const Seat = ({ onClose }) => {
+const Seat = ({ onClose,bookingData,setBookingData }) => {
+
+let navigate=useNavigate();
+
+  let [selectedSeats,setSelectedSeats]=useState([])
+  let bookedSeats=[""]
+
+  
+            
+       let handleBooking=()=>{
+    if (selectedSeats.length === 0) return;
+
+  // Create updated booking data
+  const updatedBookingData = { ...bookingData, Bookingseats: selectedSeats };
+
+  // Update parent state (if needed)
+  setBookingData(updatedBookingData);
+
+  // Navigate and pass the updated data
+  navigate("/bookingsummary", { state: { bookingData: updatedBookingData } });
+         }              
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm p-4">
       
-      {/* Seat Box */}
-      <div className="w-[90%] md:w-[800px] bg-white rounded-xl shadow-2xl p-6 relative">
-        
+      {/* Seat Container */}
+      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-2xl p-6 relative">
+
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -17,30 +41,48 @@ const Seat = ({ onClose }) => {
         </button>
 
         {/* Screen */}
-        <div className="text-center mb-6">
-          <div className="w-full h-3 bg-gray-300 rounded-full mb-2"></div>
-          <p className="text-sm text-gray-500">SCREEN THIS WAY</p>
-        </div>
+       <SeatBookingScreen/>
 
         {/* Seats */}
-        <div className="grid grid-cols-8 gap-3 justify-center">
-          {Array.from({ length: 40 }).map((_, i) => (
-            <div
-              key={i}
-              className="w-8 h-8 rounded bg-green-500 hover:bg-green-600 cursor-pointer"
-            />
-          ))}
+        <SeatGrid 
+        bookedSeats={bookedSeats}
+        selectedSeats={selectedSeats}
+        setSelectedSeats={setSelectedSeats}
+        />
+
+        {/* Info Panel */}
+        <div className="mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+
+          {/* Seat Info */}
+          <div className="text-sm text-gray-600">
+            <p>
+              <span className="font-semibold">Selected Seats:</span> {selectedSeats.map((e)=>(e+","))}
+            </p>
+            
+          </div>
+
+          {/* Book Button */}
+          <button
+           className="w-full md:w-auto px-8 py-3 bg-red-600 hover:bg-red-700 text-white rounded-lg font-semibold transition shadow"
+           
+           onClick={handleBooking}
+           >
+            Book Tickets
+          </button>
         </div>
 
         {/* Legend */}
         <div className="flex justify-center gap-6 mt-6 text-sm">
           <div className="flex items-center gap-2">
-            <span className="w-4 h-4 bg-green-500 rounded"></span> Available
+            <span className="w-4 h-4 bg-green-100 border border-green-500 rounded"></span>
+            Available
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-4 h-4 bg-gray-300 rounded"></span> Booked
+            <span className="w-4 h-4 bg-gray-300 rounded"></span>
+            Booked
           </div>
         </div>
+
       </div>
     </div>
   );

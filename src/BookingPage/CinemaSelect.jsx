@@ -2,9 +2,21 @@ import { useEffect, useState } from "react";
 import { Heart, Popcorn, Ticket } from "lucide-react";
 import DateSelect from "./DateSelect";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
-const CinemaSelect = ({setShowSeat}) => {
+const CinemaSelect = ({setShowSeat,bookingData,setBookingData}) => {
+
+  let navigate=useNavigate();
+
   const [selectedShow, setSelectedShow] = useState(null);
+
+  let checkLogin=()=>{
+    let logindata=JSON.parse(localStorage.getItem("loginUser"));
+    if(!logindata){
+      alert("For booking you need to login")
+      navigate("/login")
+    }
+  }
   
 
  let theatres=[
@@ -42,7 +54,7 @@ const CinemaSelect = ({setShowSeat}) => {
 
   return (
     <section className="w-full px-4 md:px-12 py-6 bg-gray-100">
-      <DateSelect/>
+      <DateSelect bookingData={bookingData} setBookingData={setBookingData}/>
       <h2 className="text-xl md:text-3xl font-semibold mb-6">
         Select Theatre & Show Time
       </h2>
@@ -98,9 +110,15 @@ const CinemaSelect = ({setShowSeat}) => {
                     key={time}
                     onClick={() =>{
                       setSelectedShow(`${theatre.id}-${time}`)
+
+                      setBookingData((prev) => ({
+                       ...prev,
+                        cinemaName: theatre.name,
+                        showTime: time,
+                         }));
+                         checkLogin()
                       setShowSeat(true)
-                    }
-                    }
+                    }}
                     
                     className={`
                       px-4 py-2 rounded-md text-sm font-medium transition

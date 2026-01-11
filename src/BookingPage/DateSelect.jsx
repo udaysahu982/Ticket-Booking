@@ -5,6 +5,7 @@ const getNextThreeDays = () => {
   const days = [];
   const options = { weekday: "short" };
 
+
   for (let i = 0; i < 3; i++) {
     const date = new Date();
     date.setDate(date.getDate() + i);
@@ -20,7 +21,7 @@ const getNextThreeDays = () => {
   return days;
 };
 
-const DateSelect = () => {
+const DateSelect = ({bookingData,setBookingData}) => {
   const [selected, setSelected] = useState(0);
   const days = getNextThreeDays();
 
@@ -29,7 +30,17 @@ const DateSelect = () => {
       {days.map((item) => (
         <button
           key={item.id}
-          onClick={() => setSelected(item.id)}
+          onClick={() =>{
+            setSelected(item.id)
+            setBookingData((prev)=>(
+              {
+                ...prev,
+                Date:item.date,
+                Day:item.day,
+              }))
+          } 
+           
+          }
           className={`md:w-16 py-2 rounded-lg border text-center transition
             ${
               selected === item.id

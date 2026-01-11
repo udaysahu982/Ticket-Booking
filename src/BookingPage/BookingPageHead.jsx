@@ -23,6 +23,7 @@ const BookingPageHead = ({id}) => {
   },[id])
 
   useEffect(() => {
+      if (!data) return;
     gsap.from(containerRef.current, {
       opacity: 0,
       y: 60,

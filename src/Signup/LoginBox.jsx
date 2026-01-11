@@ -17,26 +17,30 @@ const LoginBox = () => {
     });
   };
 
-  const handleSubmit = async(e) => {
-    e.preventDefault();
-    let api="http://localhost:3000/movie";
-    let res= await axios.get(`${api}?email=${formData.email}`)
-    let user = res.data[0];
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  let api = "http://localhost:3000/movie";
 
-    if(!res.data.length){
-      return alert("Invaild email and password");
-    }
-   else if(user.password!==formData.password){
-      return alert("Invaild email and password");
-    }
-    else{
-      alert("Login Success")
-      navigate("/")
-    }
+  try {
+    let res = await axios.get(`${api}?email=${formData.email}`);
+    let user = res.data[0]; // matched user
 
+    if (!user) {
+      return alert("Invalid email or password");
+    } else if (user.password !== formData.password) {
+      return alert("Invalid email or password");
+    } else {
+      // Store only the matched user object
+      localStorage.setItem("loginUser", JSON.stringify(user));
+      alert("Login Success");
+      navigate("/");
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Please try again.");
+  }
+};
 
-    
-  };
 
   return (
     <div className="relative w-full max-w-sm bg-white rounded-xl shadow-lg p-6">

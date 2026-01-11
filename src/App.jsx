@@ -16,6 +16,7 @@ import Login from './Signup/Login'
 import BookingPage from './BookingPage/BookingPage'
 import LocationSearch from './PopWindows/LocationSearch'
 import UserDetails from './Signup/SideNav/UserDetails'
+import BookingSummary from './BookingPage/BookingSummary'
 
 
 
@@ -30,8 +31,10 @@ function App() {
       <Route path="/" element={<Movies/>}/>
       <Route path="/events" element={<Events/>}/>
       <Route path="/dining" element={<Dining/>}/>
-      <Route path="/foryou" element={<Foryou/>}/>
+      {/* <Route path="/foryou" element={<Foryou/>}/> */}
       <Route path='/Booking/:id' element={<BookingPage/>}/>
+      <Route path="/bookingsummary" element={<BookingSummary />}
+/>
       </Route>
 
       <Route element={<AuthLayout/>}>
