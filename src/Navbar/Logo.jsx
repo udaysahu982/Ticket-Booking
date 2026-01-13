@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logo = () => {
   return (
-     <div className='hidden  text-3xl sm:flex items-center justify-center' style={{width:"40%"}}>LOGO</div>
+     <div className='hidden  md:text-4xl sm:flex items-center justify-center font-semibold font-mono' style={{width:"40%"}}>Bookit</div>
 
   )
 }

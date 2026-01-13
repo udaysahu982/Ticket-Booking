@@ -4,17 +4,16 @@ import BookingPageBody from './BookingPageBody.jsx'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
-const BookingPage = () => {
+const EventBookPage = () => {
   
   const {id}=useParams()
 
   let [data,setData]=useState(null);
 
 
-
   let [bookingData,setBookingData]=useState({
-       movieId: id,
-       movieName: "",          
+       movieId: id,    
+       movieName:"",           
        cinemaName: "",
        showTime: "",
        Bookingseats: [],
@@ -22,15 +21,15 @@ const BookingPage = () => {
        Day:""
   })
 
- useEffect(()=>{
+  useEffect(()=>{
  
-   axios.get(`http://localhost:3000/movielist/${id}`)
+   axios.get(`http://localhost:3000/eventList/${id}`)
    .then((res)=>{
      
     //  console.log(res.data);
      setData(res.data);
 
-     setBookingData((prev) => ({
+      setBookingData((prev) => ({
           ...prev,
           movieName: res.data.movieName
         }))
@@ -40,13 +39,13 @@ const BookingPage = () => {
   
   },[id])
 
+
+
   return (
     <>
     
       {/* <BookingPageHead props={imgObj[id]}/> */}
       <BookingPageHead data={data}/>
-
-
       <BookingPageBody 
       bookingData={bookingData}
       setBookingData={setBookingData}
@@ -57,4 +56,4 @@ const BookingPage = () => {
   )
 }
 
-export default BookingPage
+export default EventBookPage

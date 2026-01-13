@@ -7,6 +7,8 @@ const Signup = () => {
   
 const navigate=useNavigate();
 
+let [err, setErr]= useState({})
+
   let [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,6 +19,7 @@ const navigate=useNavigate();
 
 
   let handleChange = (e) => {
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -28,24 +31,36 @@ const navigate=useNavigate();
     const strongPass=/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
 
     e.preventDefault();
+
+    let newErr={};
+
     let api="http://localhost:3000/movie";
 
 
     if( formData.name.trim()==""){
-      return alert("Enter a valid Name")
+      newErr.name="Name is required"
     }
     if(formData.number.length != 10){
-      return alert("Enter a valid Number")
+     newErr.number="Phone number must be 10 digits"
     }
     if(!emailPattern.test(formData.email)){
-      return alert("Enter a valid Email")
+      newErr.email="Enter a vaild Email"
     }
     if(!strongPass.test(formData.password)){
-      return alert("Enter a Strong password")
+      newErr.pass="Password must contain uppercase, lowercase, number & special character"
     }
+
+    if(Object.keys(newErr).length>0){
+      setErr(newErr);
+      return;
+    }
+
+    setErr({});  //clear preious errors
+
 
      let res= await axios.get(`${api}?email=${formData.email}`)
      let res1= await axios.get(`${api}?number=${formData.number}`)
+
      if(res.data.length>0){
        return alert("Email Already Exists")
      }
@@ -59,18 +74,14 @@ const navigate=useNavigate();
 
     })
      }
-   
-
-    
-
-   
+ 
     
   };
 
   return (
     <div className="w-full max-w-sm bg-white rounded-xl shadow-lg ">
         <div className=" w-full h-8  flex justify-end ">
-           <Link to="/user"> <div className=" w-8 h-full rounded-full bg-black flex justify-center items-center text-white font-extrabold"> ✕</div></Link> 
+           <div onClick={()=>navigate(-1)} className=" w-8 h-full rounded-full bg-black flex justify-center items-center text-white font-extrabold cursor-pointer"> ✕</div> 
         </div>
         <div className="p-6">
       <h2 className=" text-2xl font-semibold text-center mb-6">
@@ -79,43 +90,44 @@ const navigate=useNavigate();
       
 
       <form onSubmit={handleSubmit} className="space-y-4">
-
+        {err.name &&  <p className="text-red-500 text-sm">{err.name}</p>}
         <input
           type="text"
           name="name"
           placeholder="Full Name"
           value={formData.name}
           onChange={handleChange}
-          required
+          // required
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
         />
-
+         {err.email &&  <p className="text-red-500 text-sm">{err.email}</p>}
         <input
           type="email"
           name="email"
           placeholder="Email Address"
           value={formData.email}
           onChange={handleChange}
-          required
+          // required
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
         />
+         {err.number &&  <p className="text-red-500 text-sm">{err.number}</p>}
         <input
           type="number"
           name="number"
           placeholder="Phone Number"
           value={formData.number}
           onChange={handleChange}
-          required
+          // required
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
         />
-
+         {err.pass &&  <p className="text-red-500 text-sm">{err.pass}</p>}
         <input
           type="password"
           name="password"
           placeholder="Password"
           value={formData.password}
           onChange={handleChange}
-          required
+          // required
           className="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
         />
 

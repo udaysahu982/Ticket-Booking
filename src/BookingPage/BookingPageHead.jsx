@@ -5,22 +5,24 @@ import RateNow from "./RateNow";
 import axios from "axios";
 import MovieLoader from "./MovieLoader";
 
-const BookingPageHead = ({id}) => {
+const BookingPageHead = ({data}) => {
+
   const containerRef = useRef(null);
-  let [data,setData]=useState(null);
-
-
-  useEffect(()=>{
- 
-   axios.get(`http://localhost:3000/movielist/${id}`)
-   .then((res)=>{
-     
-    //  console.log(res.data);
-     setData(res.data);
-   })
-   .catch((err)=>console.log(err));
   
-  },[id])
+  // let [data,setData]=useState(null);
+
+
+  // useEffect(()=>{
+ 
+  //  axios.get(`http://localhost:3000/movielist/${id}`)
+  //  .then((res)=>{
+     
+  //   //  console.log(res.data);
+  //    setData(res.data);
+  //  })
+  //  .catch((err)=>console.log(err));
+  
+  // },[id])
 
   useEffect(() => {
       if (!data) return;
@@ -104,7 +106,7 @@ const BookingPageHead = ({id}) => {
 
           {/* Meta Info */}
           <p className="text-lg text-gray-300">
-            UA • 3h 30m • Hindi • 2D
+            {data.duration}
           </p>
 
           {/* Description */}
@@ -115,7 +117,8 @@ const BookingPageHead = ({id}) => {
           {/* Trailer Button */}
           <button className="inline-flex items-center gap-2 mt-2 text-red-500 hover:text-red-400 font-medium">
             <Play size={18} />
-            Watch Trailer
+            <a href={data.youtube}>Watch Trailer</a>
+            
           </button>
         </div>
       </div>

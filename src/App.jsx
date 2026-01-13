@@ -17,6 +17,7 @@ import BookingPage from './BookingPage/BookingPage'
 import LocationSearch from './PopWindows/LocationSearch'
 import UserDetails from './Signup/SideNav/UserDetails'
 import BookingSummary from './BookingPage/BookingSummary'
+import EventBookPage from './BookingPage/EventBookPage'
 
 
 
@@ -33,6 +34,7 @@ function App() {
       <Route path="/dining" element={<Dining/>}/>
       {/* <Route path="/foryou" element={<Foryou/>}/> */}
       <Route path='/Booking/:id' element={<BookingPage/>}/>
+      <Route path='/Eventbook/:id' element={<EventBookPage/>}/>
       <Route path="/bookingsummary" element={<BookingSummary />}
 />
       </Route>

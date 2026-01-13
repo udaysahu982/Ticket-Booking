@@ -8,7 +8,7 @@ const Footer = () => {
       <div style={styles.topSection}>
         {/* Logo */}
         <div style={styles.logoSection}>
-          <h2 style={styles.logo}>Logo</h2>
+          <h2 style={styles.logo}>Bookit</h2>
           <p style={styles.tagline}>Book tickets instantly</p>
         </div>
 

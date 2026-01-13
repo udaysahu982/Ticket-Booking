@@ -35,7 +35,7 @@ const MovieCard=(data)=> {
 
   return (
 
-    <Link to={`/Booking/${data.movie.id}`}>
+    // <Link to={`/Booking/${data.movie.id}`}>
     <div
       className="movie-card min-w-55 md:min-w-0 snap-start"
   ref={cardRef}
@@ -59,7 +59,7 @@ const MovieCard=(data)=> {
         <p className="movie-extra">{data.movie.duration} • {data.movie.genre}</p>
       </div>
     </div>
-    </Link>
+    // </Link>
   );
 }
 

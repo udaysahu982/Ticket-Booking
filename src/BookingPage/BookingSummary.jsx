@@ -31,6 +31,10 @@ const BookingSummary = () => {
             <span className="font-medium text-gray-700">Movie ID:</span>
             <span className="font-semibold text-gray-900">{bookingData.movieId}</span>
           </div>
+          <div className="flex justify-between">
+            <span className="font-medium text-gray-700">Movie Name:</span>
+            <span className="font-semibold text-gray-900">{bookingData.movieName}</span>
+          </div>
 
           <div className="flex justify-between">
             <span className="font-medium text-gray-700">Cinema:</span>
