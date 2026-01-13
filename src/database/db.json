@@ -30,70 +30,82 @@
     }
   ],
   "movielist": [
-    {
-      "id": "0",
-      "photo": "/movies/dhurandar.jpg",
-      "photo1": "/movies//dhurandar1.jpg",
-      "movieName": "Dhurandar",
-      "movieTitle1": "Action",
-      "movieTitle2": "Thriller",
-      "movieTitle3": "Drama",
-      "movieTitle": "A | Action, Thriller",
-      "movieAbout": "Dhurandar is a high-octane action thriller packed with intense drama, powerful performances, and edge-of-the-seat moments."
-    },
-    {
-      "id": "1",
-      "photo": "/movies/avatar.jpg",
-      "photo1": "/movies//avatar1.jpg",
-      "movieName": "Avatar",
-      "movieTitle1": "Action",
-      "movieTitle2": "Adventure",
-      "movieTitle3": "Sci fi",
-      "movieTitle": "UA 16+ | Action, Adventure +2 more",
-      "movieAbout": "Avatar is a visually breathtaking epic that blends groundbreaking spectacle with a high-stakes emotional journey, plunging audiences into a battle for survival fueled by sacrifice and primal power."
-    },
-    {
-      "id": "2",
-      "photo": "/movies/ikkis.jpg",
-      "photo1": "/movies//ikkis1.jpg",
-      "movieName": "Ikkis",
-      "movieTitle1": "Action",
-      "movieTitle2": "Adventure",
-      "movieTitle3": "Sci fi",
-      "movieTitle": "A | Drama, Action +2 more",
-      "movieAbout": "Ikkis is a gripping, soul-stirring war drama that honors extraordinary bravery with raw intensity, capturing a young soldier’s unbreakable spirit amidst the thunderous chaos of the 1971 battlefield."
-    },
-    {
-      "id": "3",
-      "photo": "/movies/tumera1.avif",
-      "photo1": "/movies/tumera.jpg",
-      "movieName": "Tu Meri Main Tera Main Tera Tu Mer",
-      "movieTitle1": "Romance",
-      "movieTitle2": "Adventure",
-      "movieTitle3": "Comedy",
-      "movieAbout": "Two people fall in love while finding themselves, but family pressures challenge their relationship."
-    },
-    {
-      "id": "4",
-      "photo": "/movies/Rajasaab1.avif",
-      "photo1": "/movies/Rajasaab.avif",
-      "movieName": "Raja Saab",
-      "movieTitle1": "Standup Comedy",
-      "movieTitle2": "Comedy",
-      "movieTitle3": "Horror",
-      "movieAbout": "A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab."
-    },
-    {
-      "id": "5",
-      "photo": "/movies/jananyagan.jpg",
-      "photo1": "/movies/jananayagan.avif",
-      "movieName": "Jana Nayagan",
-      "movieTitle1": "Adventure",
-      "movieTitle2": "Action",
-      "movieTitle3": "Drama",
-      "movieAbout": "A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab."
-    },
-    {
+  {
+    "id": "0",
+    "photo": "/movies/dhurandar.jpg",
+    "photo1": "/movies//dhurandar1.jpg",
+    "movieName": "Dhurandar",
+    "movieTitle1": "Action",
+    "movieTitle2": "Thriller",
+    "movieTitle3": "Drama",
+    "movieTitle": "A | Action, Thriller",
+    "movieAbout": "Dhurandar is a high-octane action thriller packed with intense drama, powerful performances, and edge-of-the-seat moments.",
+    "duration": "A • 2h 25m • Hindi • 2D",
+    "youtube": "https://youtu.be/a6iHwceS7cg?si=e1XWYjmG_lg36qsD"
+  },
+  {
+    "id": "1",
+    "photo": "/movies/avatar.jpg",
+    "photo1": "/movies//avatar1.jpg",
+    "movieName": "Avatar",
+    "movieTitle1": "Action",
+    "movieTitle2": "Adventure",
+    "movieTitle3": "Sci fi",
+    "movieTitle": "UA 16+ | Action, Adventure +2 more",
+    "movieAbout": "Avatar is a visually breathtaking epic that blends groundbreaking spectacle with a high-stakes emotional journey, plunging audiences into a battle for survival fueled by sacrifice and primal power.",
+    "duration": "UA • 2h 42m • English • 3D",
+    "youtube": "https://youtu.be/8QVYLudMjJA?si=0THsEIU0ehPW1L-X"
+  },
+  {
+    "id": "2",
+    "photo": "/movies/ikkis.jpg",
+    "photo1": "/movies//ikkis1.jpg",
+    "movieName": "Ikkis",
+    "movieTitle1": "Action",
+    "movieTitle2": "Adventure",
+    "movieTitle3": "Sci fi",
+    "movieTitle": "A | Drama, Action +2 more",
+    "movieAbout": "Ikkis is a gripping, soul-stirring war drama that honors extraordinary bravery with raw intensity, capturing a young soldier’s unbreakable spirit amidst the thunderous chaos of the 1971 battlefield.",
+    "duration": "A • 2h 10m • Hindi • 2D",
+    "youtube": "https://youtu.be/8QVYLudMjJA?si=0THsEIU0ehPW1L-X"
+  },
+  {
+    "id": "3",
+    "photo": "/movies/tumera1.avif",
+    "photo1": "/movies/tumera.jpg",
+    "movieName": "Tu Meri Main Tera Main Tera Tu Mer",
+    "movieTitle1": "Romance",
+    "movieTitle2": "Adventure",
+    "movieTitle3": "Comedy",
+    "movieAbout": "Two people fall in love while finding themselves, but family pressures challenge their relationship.",
+    "duration": "UA • 2h 05m • Hindi • 2D",
+    "youtube": "https://youtu.be/jStzDYz2ajI?si=ucrsRJyOCGmwd9W8"
+  },
+  {
+    "id": "4",
+    "photo": "/movies/Rajasaab1.avif",
+    "photo1": "/movies/Rajasaab.avif",
+    "movieName": "Raja Saab",
+    "movieTitle1": "Standup Comedy",
+    "movieTitle2": "Comedy",
+    "movieTitle3": "Horror",
+    "movieAbout": "A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab.",
+    "duration": "UA • 2h 20m • Hindi • 2D",
+    "youtube": "https://youtu.be/wT4HcYAeV5U?si=sfiuraeTkqOFQZn9"
+  },
+  {
+    "id": "5",
+    "photo": "/movies/jananyagan.jpg",
+    "photo1": "/movies/jananayagan.avif",
+    "movieName": "Jana Nayagan",
+    "movieTitle1": "Adventure",
+    "movieTitle2": "Action",
+    "movieTitle3": "Drama",
+    "movieAbout": "A young heir embraces both his royal heritage and rebellious spirit as he rises to power, establishing unprecedented rules during his reign as Raja Saab.",
+    "duration": "UA • 2h 35m • Tamil • 2D",
+    "youtube": "https://youtu.be/fJaAYcERf3Y?si=P82bh_nA74hwrdOL"
+  },
+  {
     "id": "6",
     "photo": "https://m.media-amazon.com/images/M/MV5BYTM0NzM2NjAtMmM1Yi00NGU5LTgxOWQtOTU2YTc2ODdhODcwXkEyXkFqcGc@._V1_FMjpg_UX1920_.jpg",
     "photo1": "https://image.tmdb.org/t/p/original/9dKCd55IuTT5QRs989m9Qlb7d2B.jpg",
@@ -102,7 +114,9 @@
     "movieTitle2": "Adventure",
     "movieTitle3": "Drama",
     "movieTitle": "UA 13+ | Action, Adventure",
-    "movieAbout": "Wakanda faces new global threats while honoring legacy, unity, and strength after the loss of their king."
+    "movieAbout": "Wakanda faces new global threats while honoring legacy, unity, and strength after the loss of their king.",
+    "duration": "UA • 2h 07m • English • 2D",
+    "youtube": "https://youtu.be/f_HvoipFcA8?si=-sVc7ybhlmJtrLXS"
   },
   {
     "id": "7",
@@ -113,7 +127,9 @@
     "movieTitle2": "History",
     "movieTitle3": "Thriller",
     "movieTitle": "A | Drama, History",
-    "movieAbout": "The intense story of J. Robert Oppenheimer and the creation of the atomic bomb that changed world history."
+    "movieAbout": "The intense story of J. Robert Oppenheimer and the creation of the atomic bomb that changed world history.",
+    "duration": "UA • 2h 20m • English • 2D",
+    "youtube": "https://youtu.be/g4Hbz2jLxvQ?si=EP5hL5FbMiblgFZ9"
   },
   {
     "id": "8",
@@ -124,7 +140,9 @@
     "movieTitle2": "Crime",
     "movieTitle3": "Thriller",
     "movieTitle": "A | Action, Crime",
-    "movieAbout": "John Wick uncovers a path to defeating the High Table, facing deadly enemies across the globe."
+    "movieAbout": "John Wick uncovers a path to defeating the High Table, facing deadly enemies across the globe.",
+    "duration": "A • 2h 49m • English • 2D",
+    "youtube": "https://youtu.be/qEVUtrk8_B4?si=8ZKYNHHzffEh-aYi"
   },
   {
     "id": "9",
@@ -135,7 +153,9 @@
     "movieTitle2": "Adventure",
     "movieTitle3": "Action",
     "movieTitle": "UA 13+ | Sci-Fi, Adventure",
-    "movieAbout": "Jake Sully and Neytiri explore Pandora’s oceans while protecting their family from returning threats."
+    "movieAbout": "Jake Sully and Neytiri explore Pandora’s oceans while protecting their family from returning threats.",
+    "duration": "UA • 3h 12m • Telugu • 2D",
+    "youtube": "https://youtu.be/-LNgluyqEJI?si=j8sf2CdIuaV5Oo95"
   },
   {
     "id": "10",
@@ -146,7 +166,9 @@
     "movieTitle2": "Adventure",
     "movieTitle3": "Fantasy",
     "movieTitle": "UA 13+ | Action, Adventure",
-    "movieAbout": "Spider-Man’s identity is revealed, forcing him to face villains from multiple universes."
+    "movieAbout": "Spider-Man’s identity is revealed, forcing him to face villains from multiple universes.",
+    "duration": "UA • 2h 28m • English • 3D",
+    "youtube": "https://youtu.be/JfVOs4VSpmA?si=PyH5d4NBKIdddSvA"
   },
   {
     "id": "11",
@@ -157,7 +179,9 @@
     "movieTitle2": "Crime",
     "movieTitle3": "Drama",
     "movieTitle": "UA 13+ | Action, Crime",
-    "movieAbout": "Batman faces his greatest psychological and physical test when the Joker unleashes chaos on Gotham City."
+    "movieAbout": "Batman faces his greatest psychological and physical test when the Joker unleashes chaos on Gotham City.",
+    "duration": "UA • 2h 32m • English • 2D",
+    "youtube": "https://youtu.be/JfVOs4VSpmA?si=PyH5d4NBKIdddSvA"
   },
   {
     "id": "12",
@@ -168,7 +192,9 @@
     "movieTitle2": "Adventure",
     "movieTitle3": "Sci-Fi",
     "movieTitle": "UA 13+ | Action, Adventure",
-    "movieAbout": "The Avengers unite to stop Thanos from collecting all Infinity Stones and wiping out half of the universe."
+    "movieAbout": "The Avengers unite to stop Thanos from collecting all Infinity Stones and wiping out half of the universe.",
+    "duration": "U • 1h 45m • English • 2D",
+    "youtube": "https://youtu.be/JfVOs4VSpmA?si=PyH5d4NBKIdddSvA"
   },
   {
     "id": "13",
@@ -179,7 +205,9 @@
     "movieTitle2": "Fantasy",
     "movieTitle3": "Adventure",
     "movieTitle": "UA 13+ | Action, Fantasy",
-    "movieAbout": "An Amazonian warrior leaves her homeland to stop a devastating war and discovers her true destiny."
+    "movieAbout": "An Amazonian warrior leaves her homeland to stop a devastating war and discovers her true destiny.",
+    "duration": "UA • 2h 21m • English • 2D",
+    "youtube": "https://youtu.be/JfVOs4VSpmA?si=PyH5d4NBKIdddSvA"
   },
   {
     "id": "14",
@@ -190,11 +218,108 @@
     "movieTitle2": "Adventure",
     "movieTitle3": "Drama",
     "movieTitle": "UA 13+ | Sci-Fi, Adventure",
-    "movieAbout": "A team of astronauts travels through a wormhole in search of a new home for humanity."
+    "movieAbout": "A team of astronauts travels through a wormhole in search of a new home for humanity.",
+    "duration": "UA • 2h 49m • English • IMAX",
+    "youtube": "https://youtu.be/JfVOs4VSpmA?si=PyH5d4NBKIdddSvA"
   }
-  ],
+]
+,
   "theaters":[
 
     
-  ]
+  ],
+  "eventList":[
+  {
+    "id": "0",
+    "photo": "",
+    "photo1": "https://i.pinimg.com/736x/2f/1f/38/2f1f38703df6306ed734e512aaad4b15.jpg",
+    "movieName": "Arijit Singh Live Concert",
+    "movieTitle1": "Music",
+    "movieTitle2": "Live",
+    "movieTitle3": "Concert",
+    "movieTitle": "UA | Music Concert",
+    "movieAbout": "Arijit Singh Live Concert is a soulful musical evening featuring mesmerizing live performances and emotional melodies.",
+    "duration": "UA • 3h 00m • Hindi • Live",
+    "youtube": "https://www.youtube.com/results?search_query=Arijit+Singh+Live+Concert+Trailer"
+  },
+  {
+    "id": "1",
+    "photo": "",
+    "photo1": "https://i.pinimg.com/1200x/f5/a8/f9/f5a8f9f787a2b4d652c40c452c2ce477.jpg",
+    "movieName": "Zakir Khan – Tathastu",
+    "movieTitle1": "Comedy",
+    "movieTitle2": "Stand-up",
+    "movieTitle3": "Live",
+    "movieTitle": "UA | Stand-up Comedy",
+    "movieAbout": "Zakir Khan – Tathastu is a heartfelt stand-up comedy show blending humor with relatable life experiences.",
+    "duration": "UA • 2h 00m • Hindi • Live",
+    "youtube": "https://www.youtube.com/results?search_query=Zakir+Khan+Tathastu+Trailer"
+  },
+  {
+    "id": "2",
+    "photo": "",
+    "photo1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-Y9roE9D9N55EqVmuIoPUuJsdo_0B7qFVw&s",
+    "movieName": "Sunburn EDM Night",
+    "movieTitle1": "Music",
+    "movieTitle2": "EDM",
+    "movieTitle3": "Festival",
+    "movieTitle": "A | Music Festival",
+    "movieAbout": "Sunburn EDM Night is an electrifying music festival featuring high-energy beats, DJs, and an unforgettable party atmosphere.",
+    "duration": "A • 4h 00m • English • Live",
+    "youtube": "https://www.youtube.com/results?search_query=Sunburn+EDM+Festival+Trailer"
+  },
+  {
+    "id": "3",
+    "photo": "",
+    "photo1": "https://m.media-amazon.com/images/M/MV5BMmFjNTZmOGMtODBjOS00MzlhLTlkZGItYWFjMGI0ZDJiNmNiXkEyXkFqcGc@._V1_.jpg",
+    "movieName": "Biswa Kalyan Rath Live",
+    "movieTitle1": "Comedy",
+    "movieTitle2": "Stand-up",
+    "movieTitle3": "Live",
+    "movieTitle": "UA | Stand-up Comedy",
+    "movieAbout": "Biswa Kalyan Rath Live is a sharp and witty stand-up comedy show filled with intelligent humor and observational jokes.",
+    "duration": "UA • 1h 45m • Hindi • Live",
+    "youtube": "https://www.youtube.com/results?search_query=Biswa+Kalyan+Rath+Live+Show"
+  },
+  {
+    "id": "4",
+    "photo": "",
+    "photo1": "https://i.pinimg.com/736x/54/91/56/54915684b599bbca7e59574bacfa31ea.jpg",
+    "movieName": "Indian Classical Music Evening",
+    "movieTitle1": "Classical",
+    "movieTitle2": "Music",
+    "movieTitle3": "Live",
+    "movieTitle": "U | Classical Music",
+    "movieAbout": "Indian Classical Music Evening is a peaceful and culturally rich musical experience showcasing timeless ragas.",
+    "duration": "U • 2h 30m • Hindi • Live",
+    "youtube": "https://www.youtube.com/results?search_query=Indian+Classical+Music+Concert"
+  },
+  {
+    "id": "5",
+    "photo": "",
+    "photo1": "https://i.pinimg.com/1200x/b1/68/e4/b168e4b5c1d0d93bf268135d688d45a0.jpg",
+    "movieName": "Open Mic Poetry Night",
+    "movieTitle1": "Poetry",
+    "movieTitle2": "Open Mic",
+    "movieTitle3": "Live",
+    "movieTitle": "U | Poetry & Open Mic",
+    "movieAbout": "Open Mic Poetry Night is an expressive platform for poets and storytellers to share emotions and creativity.",
+    "duration": "U • 2h 00m • Hindi • Live",
+    "youtube": "https://www.youtube.com/results?search_query=Open+Mic+Poetry+Night"
+  },
+  {
+    "id": "6",
+    "photo": "",
+    "photo1": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUiAPKGvIMHLtzUP9o-6xLf_fZHcYDIN9gxg&s",
+    "movieName": "Drama Play – Andha Yug",
+    "movieTitle1": "Drama",
+    "movieTitle2": "Theatre",
+    "movieTitle3": "Stage",
+    "movieTitle": "UA | Theatre Drama",
+    "movieAbout": "Andha Yug is a powerful stage drama depicting moral dilemmas and emotional conflicts inspired by epic narratives.",
+    "duration": "UA • 2h 15m • Hindi • Theatre",
+    "youtube": "https://www.youtube.com/results?search_query=Andha+Yug+Drama+Play"
+  }
+]
+
 }
