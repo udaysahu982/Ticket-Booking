@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const BookingSummary = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { bookingData } = location.state || {}; // get data passed via navigate
+  const { bookingData } = location.state || {}; // get data passed via navigate   ----> send by seat.jsx
+
+
+  useEffect(() => {
+  if (!bookingData) return;
+
+  let existingBookings =
+    JSON.parse(localStorage.getItem("BookData")) || [];
+
+  existingBookings.push(bookingData);
+
+  localStorage.setItem(
+    "BookData",
+    JSON.stringify(existingBookings)
+  );
+}, [bookingData]);
 
   console.log(bookingData)
 
