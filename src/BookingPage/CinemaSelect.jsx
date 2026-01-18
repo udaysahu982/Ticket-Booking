@@ -10,8 +10,13 @@ const CinemaSelect = ({setShowSeat,bookingData,setBookingData}) => {
 
   const [selectedShow, setSelectedShow] = useState(null);
 
+  
   let checkLogin=()=>{
     let logindata=JSON.parse(localStorage.getItem("loginUser"));
+    setBookingData((prev)=>(
+      {...prev, userId : logindata.id}
+    ))
+
     if(!logindata){
       alert("For booking you need to login")
       navigate("/login")

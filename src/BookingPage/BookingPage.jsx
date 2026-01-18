@@ -11,9 +11,9 @@ const BookingPage = () => {
   let [data,setData]=useState(null);
 
 
-
   let [bookingData,setBookingData]=useState({
        movieId: id,
+       userId:"",
        movieName: "",          
        cinemaName: "",
        showTime: "",
